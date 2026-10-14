@@ -1,4 +1,4 @@
-T18_ukol-02 – první fáze (2-i): implementace testů
+T18_ukol-02a – první fáze (2-i): implementace testů
 Autor: Vojtěch Nováček
 
 ROZSAH ODEVZDÁNÍ
@@ -45,13 +45,13 @@ Komparační funkce jsou implementované, jejich testy mají projít všechny.
 Skutečné počty jsou v docs/Vysledky_testu.txt.
 
 SPUŠTĚNÍ A DOKUMENTACE
-IntelliJ IDEA: File > Open, vyberte složku T18_ukol-02 nebo její pom.xml.
-Nastavte JDK 17, načtěte Maven. Pravým tlačítkem na tests > Run All Tests.
+IntelliJ IDEA: File > Open, vyberte složku T18_ukol-02a nebo její pom.xml.
+Nastavte JDK 17, načtěte Maven. Pravým tlačítkem na test > Run All Tests.
 Samotný Main ponechává původní Hello world, automatické testy nespouští.
 Příkaz mvn test má nyní neúspěšný návratový kód kvůli testům nad kostrou.
 Pouze komparace: mvn -Dtest=ZpracovaniMojeTest test.
 Dokumentace: docs/Dokumentace.html. Jde o vygenerovaný Javadoc sloučený
 do jediného HTML, aby odevzdání neobsahovalo desítky podpůrných souborů.
 Pro regenerování standardní dokumentace: mvn javadoc:javadoc,
-případně pro dokumentaci včetně testů nástroj javadoc se zdroji src a tests.
+případně pro dokumentaci včetně testů nástroj javadoc se zdroji src a test.
 Maven při prvním otevření potřebuje internet pro stažení závislostí.

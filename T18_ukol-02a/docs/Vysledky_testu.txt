@@ -1,4 +1,4 @@
-T18_ukol-02 – skutečné výsledky první fáze
+T18_ukol-02a – skutečné výsledky první fáze
 
 Java 17; JUnit Console 1.10.2 / Jupiter 5.10.2.
 Produkční zdroje i testy úspěšně zkompilovány.

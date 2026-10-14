@@ -1,0 +1,67 @@
+Ověření 14. 10. 2026, OpenJDK 17, JUnit Platform Console 1.10.2 (JUnit Jupiter 5.10.2).
+Produkční kód i testy zkompilovány javac; testy spuštěny přímo přes JUnit Console.
+Maven test nebyl dokončen kvůli DNS při stahování závislostí.
+Javadoc vygenerován nástrojem JDK, bez varování.
+
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+╷
+├─ JUnit Jupiter ✔
+│  ├─ ZpracovaniTest ✔
+│  │  ├─ stejneMeze() ✔
+│  │  ├─ nekonecneMeze() ✔
+│  │  ├─ limitPoctu() ✔
+│  │  ├─ spatnyKrok() ✔
+│  │  ├─ zaporneMeze() ✔
+│  │  ├─ nedosazitelnaMez() ✔
+│  │  ├─ krajniInt() ✔
+│  │  ├─ desetinneKroky() ✔
+│  │  ├─ obraceneMeze() ✔
+│  │  ├─ interval(int, int, int, boolean) ✔
+│  │  │  ├─ [1] 0, 10, -1, false ✔
+│  │  │  ├─ [2] 0, 10, 0, false ✔
+│  │  │  ├─ [3] 0, 10, 1, true ✔
+│  │  │  ├─ [4] 0, 10, 9, true ✔
+│  │  │  ├─ [5] 0, 10, 10, false ✔
+│  │  │  ├─ [6] 0, 10, 11, false ✔
+│  │  │  ├─ [7] 10, 0, 5, false ✔
+│  │  │  ├─ [8] 2, 2, 2, false ✔
+│  │  │  └─ [9] -10, -2, -5, true ✔
+│  │  ├─ celeKroky() ✔
+│  │  ├─ velkyKrok() ✔
+│  │  └─ nerozlisitelnyKrok() ✔
+│  └─ VyhodnoceniProspechuTest ✔
+│     ├─ petkaMaPrednost() ✔
+│     ├─ nullPole() ✔
+│     ├─ samotnaPetka() ✔
+│     ├─ desetinnaCastPrumeru() ✔
+│     ├─ trojkaBraniVyznamenani() ✔
+│     ├─ nemeniVstup() ✔
+│     ├─ ctyrkaProjde() ✔
+│     ├─ sameJednicky() ✔
+│     ├─ presnaHranice() ✔
+│     ├─ prazdnePole() ✔
+│     ├─ neplatneZnamky() ✔
+│     └─ nadHraniciVyznamenani() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 147 ms
+[         6 containers found      ]
+[         0 containers skipped    ]
+[         6 containers started    ]
+[         0 containers aborted    ]
+[         6 containers successful ]
+[         0 containers failed     ]
+[        33 tests found           ]
+[         0 tests skipped         ]
+[        33 tests started         ]
+[         0 tests aborted         ]
+[        33 tests successful      ]
+[         0 tests failed          ]
+
+
+Modelová chybná implementace: očekávané selhání
+Exception in thread "main" java.lang.AssertionError: Očekáváno 1.5, skutečnost 1.0
+	at VyhodnoceniProspechuChybne.main(VyhodnoceniProspechuChybne.java:10)

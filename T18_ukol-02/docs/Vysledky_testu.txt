@@ -1,0 +1,100 @@
+T18_ukol-02 – skutečné výsledky první fáze
+
+Java 17; JUnit Console 1.10.2 / Jupiter 5.10.2.
+Produkční zdroje i testy úspěšně zkompilovány.
+Celkem 64 testů, 35 úspěšných, 29 neúspěšných; nic nebylo vypnuto.
+Samostatný běh ZpracovaniMojeTest: 28 úspěšných, 0 neúspěšných.
+29 neúspěšných testů míří na metody ponechané jako původní kostra.
+7 dalších testů kostry prošlo, například očekávání false mimo interval.
+JUnit vrací neúspěšný návratový kód pro celou sadu, což zde odpovídá fázi 2-i.
+Nejde o dokončené řešení všech metod.
+Testy byly spuštěny přímo přes JUnit Console; Maven sestavení se netvrdí.
+
+NEÚSPĚŠNÉ PŘÍPADY
+
+ZpracovaniTest / interval(int, int, int, boolean)[9]
+expected: <true> but was: <false>
+
+ZpracovaniTest / interval(int, int, int, boolean)[3]
+expected: <true> but was: <false>
+
+ZpracovaniTest / interval(int, int, int, boolean)[4]
+expected: <true> but was: <false>
+
+ZpracovaniTest / krajniInt()
+expected: <true> but was: <false>
+
+VyhodnoceniProspechuTest / ruzneZnamky()
+expected: <dobře> but was: <>
+
+VyhodnoceniProspechuTest / podHranici()
+expected: <výborně> but was: <>
+
+VyhodnoceniProspechuTest / presnePoloviny(int, int, String)[4]
+expected: <nedostatečně> but was: <>
+
+VyhodnoceniProspechuTest / presnePoloviny(int, int, String)[3]
+expected: <dostatečně> but was: <>
+
+ZpracovaniTest / velkyKrok()
+actual array was <null>
+
+VyhodnoceniProspechuTest / presnePoloviny(int, int, String)[2]
+expected: <dobře> but was: <>
+
+VyhodnoceniProspechuTest / presnePoloviny(int, int, String)[1]
+expected: <chvalitebně> but was: <>
+
+VyhodnoceniProspechuTest / neplatneZnamky()
+Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+
+ZpracovaniTest / celeKroky()
+actual array was <null>
+
+ZpracovaniTest / obraceneMeze()
+Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+
+ZpracovaniTest / nekonecneMeze()
+Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+
+ZpracovaniTest / spatnyKrok()
+Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+
+ZpracovaniTest / desetinneKroky()
+actual array was <null>
+
+ZpracovaniTest / stejneMeze()
+actual array was <null>
+
+ZpracovaniTest / nedosazitelnaMez()
+actual array was <null>
+
+VyhodnoceniProspechuTest / jednotliveZnamky(int, String)[2]
+expected: <chvalitebně> but was: <>
+
+VyhodnoceniProspechuTest / jednotliveZnamky(int, String)[1]
+expected: <výborně> but was: <>
+
+VyhodnoceniProspechuTest / nullPole()
+Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+
+VyhodnoceniProspechuTest / jednotliveZnamky(int, String)[5]
+expected: <nedostatečně> but was: <>
+
+VyhodnoceniProspechuTest / jednotliveZnamky(int, String)[4]
+expected: <dostatečně> but was: <>
+
+VyhodnoceniProspechuTest / jednotliveZnamky(int, String)[3]
+expected: <dobře> but was: <>
+
+VyhodnoceniProspechuTest / nadHranici()
+expected: <chvalitebně> but was: <>
+
+VyhodnoceniProspechuTest / petkaNemaZvlastniPravidlo()
+expected: <dobře> but was: <>
+
+ZpracovaniTest / zaporneMeze()
+actual array was <null>
+
+VyhodnoceniProspechuTest / prazdnePole()
+Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.

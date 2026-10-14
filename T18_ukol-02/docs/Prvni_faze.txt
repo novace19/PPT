@@ -1,0 +1,57 @@
+T18_ukol-02 – první fáze (2-i): implementace testů
+Autor: Vojtěch Nováček
+
+ROZSAH ODEVZDÁNÍ
+První fáze podle názvu odevzdávárny obsahuje návrh a implementaci testů.
+VyhodnoceniProspechu a Zpracovani zachovávají těla metod ze školní kostry:
+prospech vrací prázdný řetězec, prumer 0.0, interval false, vzorkySestupně null.
+Doplněny jsou komentáře a komparační funkce ZpracovaniMoje.comp podle U1.
+Název ZpracovaniMoje odpovídá souboru v dodané kostře; v textu cvičení je ZpracovaniMy.
+Nejde o kompletní implementaci druhé fáze. Obsah dalšího odemykaného ZIPu zatím neznáme.
+
+NÁVRH TESTŮ A PŘEDPOKLADY
+1. Komparace: -1 znamená menší, 0 rovnost, 1 větší. Testy zahrnují všechny
+konkrétní dvojice ze cvičení 02, sousedy a=b-1 a a=b+1, krajní int,
+řetězce s prázdným obsahem, shodu obsahu různých objektů, prefixy,
+velikost písmen, antisymetrii a tranzitivitu. Integer.compare nepřeteče
+jako odčítání. String.compareTo porovnává obsah podle UTF-16, nikoli českou
+abecedu. Výsledek je normalizován na -1/0/1. Null není přípustný.
+2. Prospěch: ověření všech pěti hodnocení, půlek průměru, hodnot pod/nad hranicí,
+směsi známek, prázdných/neplatných vstupů a nezměněného pole.
+Kostra neurčuje přesné hranice hodnocení. Návrhový předpoklad: zaokrouhlení
+aritmetického průměru na nejbližší známku, půlka k horší známce.
+[1;1,5) výborně, [1,5;2,5) chvalitebně, [2,5;3,5) dobře,
+[3,5;4,5) dostatečně, [4,5;5] nedostatečně. Známky 1–5, žádné zvláštní
+pravidlo pro pětku. Prázdné/neplatné pole má vyvolat IllegalArgumentException,
+null NullPointerException. Soukromý prumer se ověřuje nepřímo přes prospech;
+případ [1,2] zachytí případné celočíselné dělení. Zaokrouhlení i reakce na
+neplatné vstupy jsou předpoklady pro testy, nikoli potvrzené pokyny učitele.
+3. Interval: obě meze vyloučeny, testy pod/na/uvnitř/nad mezemi, záporné
+hodnoty a krajní int. Pro stejné či obrácené meze testy předpokládají false.
+4. Vzorky: pořadí parametrů kam, odkud, krok. Předpoklad: první hodnota odkud,
+kladný krok, žádná hodnota pod kam; kam se zahrne jen tehdy, je-li dosažitelné.
+Testy celých/desetinných kroků, nedosažitelného konce, záporných/shodných mezí,
+kroku většího než interval a neplatných vstupů. Obrácené/nekonečné meze,
+NaN, nulový/záporný/nekonečný krok mají vyvolat IllegalArgumentException.
+Stejné meze dávají jednoprvkové pole. Desetinné výsledky se porovnávají
+s tolerancí 1e-12; pro stejné meze/celočíselný výsledek přesně.
+Ani tato pravidla okrajových vstupů nejsou v zadání plně určena.
+
+OČEKÁVANÉ SELHÁVÁNÍ
+Testy nejsou vypnuté ani označené jako úspěšné při libovolném výsledku.
+Červené testy nad nedoplněnou školní kostrou jsou v této fázi očekávané.
+Některé testy nad kostrou mohou projít náhodou, například interval mimo meze.
+Komparační funkce jsou implementované, jejich testy mají projít všechny.
+Skutečné počty jsou v docs/Vysledky_testu.txt.
+
+SPUŠTĚNÍ A DOKUMENTACE
+IntelliJ IDEA: File > Open, vyberte složku T18_ukol-02 nebo její pom.xml.
+Nastavte JDK 17, načtěte Maven. Pravým tlačítkem na tests > Run All Tests.
+Samotný Main ponechává původní Hello world, automatické testy nespouští.
+Příkaz mvn test má nyní neúspěšný návratový kód kvůli testům nad kostrou.
+Pouze komparace: mvn -Dtest=ZpracovaniMojeTest test.
+Dokumentace: docs/Dokumentace.html. Jde o vygenerovaný Javadoc sloučený
+do jediného HTML, aby odevzdání neobsahovalo desítky podpůrných souborů.
+Pro regenerování standardní dokumentace: mvn javadoc:javadoc,
+případně pro dokumentaci včetně testů nástroj javadoc se zdroji src a tests.
+Maven při prvním otevření potřebuje internet pro stažení závislostí.

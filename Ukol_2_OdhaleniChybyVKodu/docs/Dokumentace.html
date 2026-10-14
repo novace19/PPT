@@ -1,0 +1,514 @@
+<!doctype html><html lang="cs"><head><meta charset="UTF-8"><title>Úkol 2 – dokumentace API</title><style>body{font:16px/1.6 Arial,sans-serif;max-width:1050px;margin:32px auto;padding:0 24px;color:#202b38}h1,h2,h3{color:#174a72}main{border-top:3px solid #174a72;margin-top:40px}.member-signature,code,pre{font-family:monospace;background:#f3f5f7;padding:4px;overflow-wrap:anywhere}.summary-table{display:grid;grid-template-columns:1fr 2fr 3fr;gap:8px;background:#f3f5f7;padding:12px}section.detail{border:1px solid #dde2e6;padding:16px;margin:16px 0}.table-tabs{display:none}.inheritance{list-style:none}.block{margin:10px 0}dt{font-weight:bold}dd{margin-bottom:8px}hr{border:0;border-top:1px solid #ccc}</style></head><body><h1>Úkol 2 – dokumentace API</h1><p>Vygenerováno nástrojem Javadoc z dokumentačních komentářů, sloučeno do samostatného HTML. Autor projektu: Vojtěch Nováček.</p><main role="main">
+
+<div class="header">
+<h1 title="Class VyhodnoceniProspechu" class="title">Class VyhodnoceniProspechu</h1>
+</div>
+<div class="inheritance" title="Inheritance Tree"><span title="class or interface in java.lang" class="external-link">java.lang.Object</span>
+<div class="inheritance">VyhodnoceniProspechu</div>
+</div>
+<section class="class-description" id="class-description">
+<hr>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VyhodnoceniProspechu</span>
+<span class="extends-implements">extends <span title="class or interface in java.lang" class="external-link">Object</span></span></div>
+<div class="block">Slovní vyhodnocení aritmetického průměru známek 1 až 5.</div>
+</section>
+<section class="summary">
+<ul class="summary-list">
+
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>private final <span title="class or interface in java.lang" class="external-link">String</span>[]</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link">slovniHodnocení</span></code></div>
+<div class="col-last even-row-color">
+<div class="block">Hodnocení odpovídající zaokrouhleným známkám 1 až 5.</div>
+</div>
+</div>
+</section>
+</li>
+
+<li>
+<section class="constructor-summary" id="constructor-summary">
+<h2>Constructor Summary</h2>
+<div class="caption"><span>Constructors</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
+<div class="table-header col-last">Description</div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link">VyhodnoceniProspechu</span>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Vytvoří vyhodnocovač.</div>
+</div>
+</div>
+</section>
+</li>
+
+<li>
+<section class="method-summary" id="method-summary">
+<h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span title="class or interface in java.lang" class="external-link">String</span></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link">prospech</span><wbr>(int[]&nbsp;znamky)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Vyhodnotí průměr zaokrouhlený na nejbližší celé číslo; přesná polovina
+ se zaokrouhlí k horší známce (například 1,5 na 2).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link">prumer</span><wbr>(int[]&nbsp;znamky)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Spočítá aritmetický průměr bez ztráty desetinné části a bez změny vstupu.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<span title="class or interface in java.lang" class="external-link">Object</span></h3>
+<code><span title="class or interface in java.lang" class="external-link">clone</span>, <span title="class or interface in java.lang" class="external-link">equals</span>, <span title="class or interface in java.lang" class="external-link">finalize</span>, <span title="class or interface in java.lang" class="external-link">getClass</span>, <span title="class or interface in java.lang" class="external-link">hashCode</span>, <span title="class or interface in java.lang" class="external-link">notify</span>, <span title="class or interface in java.lang" class="external-link">notifyAll</span>, <span title="class or interface in java.lang" class="external-link">toString</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span></code></div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="slovniHodnocení">
+<h3>slovniHodnocení</h3>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><span title="class or interface in java.lang" class="external-link">String</span>[]</span>&nbsp;<span class="element-name">slovniHodnocení</span></div>
+<div class="block">Hodnocení odpovídající zaokrouhleným známkám 1 až 5.</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+
+<li>
+<section class="constructor-details" id="constructor-detail">
+<h2>Constructor Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>VyhodnoceniProspechu</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VyhodnoceniProspechu</span>()</div>
+<div class="block">Vytvoří vyhodnocovač.</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="prospech(int[])">
+<h3>prospech</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><span title="class or interface in java.lang" class="external-link">String</span></span>&nbsp;<span class="element-name">prospech</span><wbr><span class="parameters">(int[]&nbsp;znamky)</span></div>
+<div class="block">Vyhodnotí průměr zaokrouhlený na nejbližší celé číslo; přesná polovina
+ se zaokrouhlí k horší známce (například 1,5 na 2).
+ Toto pravidlo je výslovný předpoklad, protože školní kostra hranice neurčuje.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>znamky</code> - neprázdné pole známek 1 až 5</dd>
+<dt>Returns:</dt>
+<dd>slovní hodnocení zaokrouhleného průměru</dd>
+<dt>Throws:</dt>
+<dd><code><span title="class or interface in java.lang" class="external-link">NullPointerException</span></code> - pokud je pole null</dd>
+<dd><code><span title="class or interface in java.lang" class="external-link">IllegalArgumentException</span></code> - pokud je pole prázdné nebo známka mimo 1 až 5</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="prumer(int[])">
+<h3>prumer</h3>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">prumer</span><wbr><span class="parameters">(int[]&nbsp;znamky)</span></div>
+<div class="block">Spočítá aritmetický průměr bez ztráty desetinné části a bez změny vstupu.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>znamky</code> - neprázdné pole známek 1 až 5</dd>
+<dt>Returns:</dt>
+<dd>desetinný průměr známek</dd>
+<dt>Throws:</dt>
+<dd><code><span title="class or interface in java.lang" class="external-link">NullPointerException</span></code> - pokud je pole null</dd>
+<dd><code><span title="class or interface in java.lang" class="external-link">IllegalArgumentException</span></code> - pokud je pole prázdné nebo obsahuje neplatnou známku</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+
+</main><main role="main">
+
+<div class="header">
+<h1 title="Class Zpracovani" class="title">Class Zpracovani</h1>
+</div>
+<div class="inheritance" title="Inheritance Tree"><span title="class or interface in java.lang" class="external-link">java.lang.Object</span>
+<div class="inheritance">Zpracovani</div>
+</div>
+<section class="class-description" id="class-description">
+<hr>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Zpracovani</span>
+<span class="extends-implements">extends <span title="class or interface in java.lang" class="external-link">Object</span></span></div>
+<div class="block">Komparační funkce pro otevřený interval a generování sestupných vzorků.</div>
+</section>
+<section class="summary">
+<ul class="summary-list">
+
+<li>
+<section class="constructor-summary" id="constructor-summary">
+<h2>Constructor Summary</h2>
+<div class="caption"><span>Constructors</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
+<div class="table-header col-last">Description</div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link">Zpracovani</span>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Vytvoří objekt pro zpracování.</div>
+</div>
+</div>
+</section>
+</li>
+
+<li>
+<section class="method-summary" id="method-summary">
+<h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link">interval</span><wbr>(int&nbsp;odkud,
+ int&nbsp;kam,
+ int&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Ověří příslušnost do otevřeného intervalu (odkud, kam).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link">vzorkySestupně</span><wbr>(double&nbsp;kam,
+ double&nbsp;odkud,
+ double&nbsp;krok)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Generuje hodnoty odkud, odkud-krok, ...</div>
+</div>
+</div>
+</div>
+</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<span title="class or interface in java.lang" class="external-link">Object</span></h3>
+<code><span title="class or interface in java.lang" class="external-link">clone</span>, <span title="class or interface in java.lang" class="external-link">equals</span>, <span title="class or interface in java.lang" class="external-link">finalize</span>, <span title="class or interface in java.lang" class="external-link">getClass</span>, <span title="class or interface in java.lang" class="external-link">hashCode</span>, <span title="class or interface in java.lang" class="external-link">notify</span>, <span title="class or interface in java.lang" class="external-link">notifyAll</span>, <span title="class or interface in java.lang" class="external-link">toString</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span></code></div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+
+<li>
+<section class="constructor-details" id="constructor-detail">
+<h2>Constructor Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>Zpracovani</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Zpracovani</span>()</div>
+<div class="block">Vytvoří objekt pro zpracování.</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="interval(int,int,int)">
+<h3>interval</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">interval</span><wbr><span class="parameters">(int&nbsp;odkud,
+ int&nbsp;kam,
+ int&nbsp;value)</span></div>
+<div class="block">Ověří příslušnost do otevřeného intervalu (odkud, kam).</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>odkud</code> - dolní mez, nezahrnutá</dd>
+<dd><code>kam</code> - horní mez, nezahrnutá</dd>
+<dd><code>value</code> - testovaná hodnota</dd>
+<dt>Returns:</dt>
+<dd>true právě když odkud &lt; value &lt; kam; pro obrácené či stejné meze false</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="vzorkySestupně(double,double,double)">
+<h3>vzorkySestupně</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double[]</span>&nbsp;<span class="element-name">vzorkySestupně</span><wbr><span class="parameters">(double&nbsp;kam,
+ double&nbsp;odkud,
+ double&nbsp;krok)</span></div>
+<div class="block">Generuje hodnoty odkud, odkud-krok, ... až po hodnotu nejméně kam.
+ Zachovává pořadí parametrů ze zadání: nejprve kam, potom odkud.
+ Dolní mez se zahrne pouze tehdy, pokud na ni vyjde přesný počet kroků.
+ Výpočet používá desetinnou reprezentaci vstupů, nikoli opakované double odčítání.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>kam</code> - dolní mez včetně, je-li dosažitelná</dd>
+<dd><code>odkud</code> - horní mez včetně</dd>
+<dd><code>krok</code> - kladná konečná velikost kroku</dd>
+<dt>Returns:</dt>
+<dd>sestupné pole; při shodných mezích jednoprvkové</dd>
+<dt>Throws:</dt>
+<dd><code><span title="class or interface in java.lang" class="external-link">IllegalArgumentException</span></code> - pokud vstup není konečný, krok není kladný,
+         odkud je menší než kam, vzniklo by více než milion vzorků
+         nebo double nedokáže rozlišit sousední vzorky</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+
+</main><main role="main">
+
+<div class="header">
+<h1 title="Class ZpracovaniMoje" class="title">Class ZpracovaniMoje</h1>
+</div>
+<div class="inheritance" title="Inheritance Tree"><span title="class or interface in java.lang" class="external-link">java.lang.Object</span>
+<div class="inheritance">ZpracovaniMoje</div>
+</div>
+<section class="class-description" id="class-description">
+<hr>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ZpracovaniMoje</span>
+<span class="extends-implements">extends <span title="class or interface in java.lang" class="external-link">Object</span></span></div>
+<div class="block">Komparační funkce se znaménkovou konvencí -1, 0 a 1.</div>
+</section>
+<section class="summary">
+<ul class="summary-list">
+
+<li>
+<section class="constructor-summary" id="constructor-summary">
+<h2>Constructor Summary</h2>
+<div class="caption"><span>Constructors</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
+<div class="table-header col-last">Description</div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link">ZpracovaniMoje</span>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Vytvoří objekt komparačních funkcí.</div>
+</div>
+</div>
+</section>
+</li>
+
+<li>
+<section class="method-summary" id="method-summary">
+<h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link">comp</span><wbr>(int&nbsp;a,
+ int&nbsp;b)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Porovná dvě celá čísla bez přetečení při odčítání.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link">comp</span><wbr>(<span title="class or interface in java.lang" class="external-link">String</span>&nbsp;a,
+ <span title="class or interface in java.lang" class="external-link">String</span>&nbsp;b)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Porovná řetězce lexikograficky podle UTF-16, rozlišuje velikost písmen.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<span title="class or interface in java.lang" class="external-link">Object</span></h3>
+<code><span title="class or interface in java.lang" class="external-link">clone</span>, <span title="class or interface in java.lang" class="external-link">equals</span>, <span title="class or interface in java.lang" class="external-link">finalize</span>, <span title="class or interface in java.lang" class="external-link">getClass</span>, <span title="class or interface in java.lang" class="external-link">hashCode</span>, <span title="class or interface in java.lang" class="external-link">notify</span>, <span title="class or interface in java.lang" class="external-link">notifyAll</span>, <span title="class or interface in java.lang" class="external-link">toString</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span></code></div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+
+<li>
+<section class="constructor-details" id="constructor-detail">
+<h2>Constructor Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>ZpracovaniMoje</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ZpracovaniMoje</span>()</div>
+<div class="block">Vytvoří objekt komparačních funkcí.</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="comp(int,int)">
+<h3>comp</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">comp</span><wbr><span class="parameters">(int&nbsp;a,
+ int&nbsp;b)</span></div>
+<div class="block">Porovná dvě celá čísla bez přetečení při odčítání.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>a</code> - první číslo</dd>
+<dd><code>b</code> - druhé číslo</dd>
+<dt>Returns:</dt>
+<dd>-1 pokud a je menší, 0 při rovnosti, jinak 1</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="comp(java.lang.String,java.lang.String)">
+<h3>comp</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">comp</span><wbr><span class="parameters">(<span title="class or interface in java.lang" class="external-link">String</span>&nbsp;a,
+ <span title="class or interface in java.lang" class="external-link">String</span>&nbsp;b)</span></div>
+<div class="block">Porovná řetězce lexikograficky podle UTF-16, rozlišuje velikost písmen.
+ Nejde o české abecední řazení; null není přípustný.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>a</code> - první neprázdný nebo prázdný řetězec, nikoli null</dd>
+<dd><code>b</code> - druhý neprázdný nebo prázdný řetězec, nikoli null</dd>
+<dt>Returns:</dt>
+<dd>-1 pokud a předchází b, 0 při shodě, jinak 1</dd>
+<dt>Throws:</dt>
+<dd><code><span title="class or interface in java.lang" class="external-link">NullPointerException</span></code> - pokud je kterýkoli řetězec null</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+
+</main><main role="main">
+
+<div class="header">
+<h1 title="Class Main" class="title">Class Main</h1>
+</div>
+<div class="inheritance" title="Inheritance Tree"><span title="class or interface in java.lang" class="external-link">java.lang.Object</span>
+<div class="inheritance">Main</div>
+</div>
+<section class="class-description" id="class-description">
+<hr>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Main</span>
+<span class="extends-implements">extends <span title="class or interface in java.lang" class="external-link">Object</span></span></div>
+<div class="block">Krátká ukázka použití; automatické testy jsou ve složce tests.</div>
+</section>
+<section class="summary">
+<ul class="summary-list">
+
+<li>
+<section class="constructor-summary" id="constructor-summary">
+<h2>Constructor Summary</h2>
+<div class="caption"><span>Constructors</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
+<div class="table-header col-last">Description</div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link">Main</span>()</code></div>
+<div class="col-last even-row-color">
+<div class="block">Vytvoří objekt ukázkové aplikace.</div>
+</div>
+</div>
+</section>
+</li>
+
+<li>
+<section class="method-summary" id="method-summary">
+<h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link">main</span><wbr>(<span title="class or interface in java.lang" class="external-link">String</span>[]&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Vypíše ukázkové výsledky zadaných metod.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<span title="class or interface in java.lang" class="external-link">Object</span></h3>
+<code><span title="class or interface in java.lang" class="external-link">clone</span>, <span title="class or interface in java.lang" class="external-link">equals</span>, <span title="class or interface in java.lang" class="external-link">finalize</span>, <span title="class or interface in java.lang" class="external-link">getClass</span>, <span title="class or interface in java.lang" class="external-link">hashCode</span>, <span title="class or interface in java.lang" class="external-link">notify</span>, <span title="class or interface in java.lang" class="external-link">notifyAll</span>, <span title="class or interface in java.lang" class="external-link">toString</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span>, <span title="class or interface in java.lang" class="external-link">wait</span></code></div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+
+<li>
+<section class="constructor-details" id="constructor-detail">
+<h2>Constructor Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;()">
+<h3>Main</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Main</span>()</div>
+<div class="block">Vytvoří objekt ukázkové aplikace.</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="main(java.lang.String[])">
+<h3>main</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">main</span><wbr><span class="parameters">(<span title="class or interface in java.lang" class="external-link">String</span>[]&nbsp;args)</span></div>
+<div class="block">Vypíše ukázkové výsledky zadaných metod.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>args</code> - nepoužité argumenty příkazové řádky</dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+
+</main></body></html>

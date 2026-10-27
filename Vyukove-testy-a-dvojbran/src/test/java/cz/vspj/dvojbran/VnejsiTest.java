@@ -10,8 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class VnejsiTest {
     private String spust(int ocekavanyKod, String... vstupy) throws Exception {
         List<String> prikaz = new ArrayList<>(Arrays.asList(System.getProperty("java.home") + File.separator + "bin" + File.separator + "java", "-cp", System.getProperty("java.class.path"), "cz.vspj.dvojbran.Main"));
-        prikaz.addAll(Arrays.asList(vstupy));
         Process proces = new ProcessBuilder(prikaz).redirectErrorStream(true).start();
+        try (Writer vstup = new OutputStreamWriter(proces.getOutputStream(), Charset.defaultCharset())) {
+            for (String hodnota : vstupy) vstup.write(hodnota + "\n");
+        }
         ByteArrayOutputStream vystup = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024]; int n;
         while ((n = proces.getInputStream().read(buffer)) != -1) vystup.write(buffer, 0, n);
@@ -26,7 +28,7 @@ class VnejsiTest {
         assertTrue(vystup.contains("6.67 V"));
         assertTrue(vystup.contains("3.33 A"));
     }
-    @Test void odmitneChybejiciANeplatneArgumenty() throws Exception {
+    @Test void odmitneChybejiciANeplatneHodnoty() throws Exception {
         spust(1);
         spust(1, "abc", "1", "2");
         spust(1, "10", "1", "0");

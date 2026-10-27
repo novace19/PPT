@@ -33,6 +33,9 @@ class KnihovnyTest {
         assertEquals(-1, seznam.indexOf("C"));
         assertEquals(-1, Collections.emptyList().indexOf("A"));
     }
+    // Slovník v Javě představuje rozhraní Map, např. implementace HashMap.
+    // Místo Add používá put; další operace jsou get, containsKey, remove a size.
+    // put pro existující klíč přepíše hodnotu; containsKey rozliší chybějící klíč od null.
     @Test void vlozeniDoMapy() {
         Map<String, Integer> mapa = new HashMap<>();
         assertTrue(mapa.isEmpty());

@@ -1,6 +1,7 @@
 package cz.vspj.dvojbran;
 
-/** Odporový dvojbran v Theveninově náhradě, napětí ve V a odpory v ohmech. */
+/** Zdroj napětí se sériovým vnitřním odporem a odporovou zátěží.
+ * I = U / (Ri + Rz), U2 = I * Rz; napětí ve V, odpory v ohmech. */
 public final class Dvojbran {
     private Dvojbran() { }
 

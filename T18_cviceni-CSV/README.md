@@ -14,7 +14,7 @@ Na Linuxu/macOS: `sh spustit.sh`.
 
 ## IntelliJ IDEA
 
-Přes **File → Open** vyberte přímo soubor `pom.xml` v této složce a otevřete jej jako projekt. Nastavte JDK 17 nebo novější, počkejte na import Maven a spusťte `src/cz/vspj/t18/csv/Main.java`. Pracovní adresář konfigurace Run musí být kořen tohoto projektu, kde je složka `data`.
+Přes **File → Open** vyberte přímo soubor `pom.xml` v této složce a otevřete jej jako projekt. Nastavte JDK 17 nebo novější, počkejte na import Maven a spusťte `src/cz/vspj/t18/csv/Main.java`. Ukázka si najde složku `data` automaticky podle umístění JARu nebo přeložených tříd, takže pracovní adresář IntelliJ nemusíte pro ukázku nastavovat.
 
 Přiložený `T18_cviceni-CSV.jar` už je sestavený; Maven potřebujete pro nové sestavení a testy.
 
@@ -49,4 +49,11 @@ mvn clean package
 java -jar target/T18_cviceni-CSV.jar
 ```
 
-Ověřeno: **64 testů, 0 chyb, 0 přeskočených**. Závislosti testů jsou v `pom.xml` (JUnit 5). Podrobnosti a popis návrhových vzorů najdete v [docs/Dokumentace.md](docs/Dokumentace.md), skutečný protokol v [docs/Vysledky_testu.txt](docs/Vysledky_testu.txt).
+Ověřeno: **70 testů, 0 chyb, 0 přeskočených**. Závislosti testů jsou v `pom.xml` (JUnit 5). Podrobnosti a popis návrhových vzorů najdete v [docs/Dokumentace.md](docs/Dokumentace.md), skutečný protokol v [docs/Vysledky_testu.txt](docs/Vysledky_testu.txt).
+
+
+## Spuštění přímo v IntelliJ přes JAR
+
+Přiložená konfigurace `CSV - ukazka` spouští hotový JAR. Pokud už máte vlastní konfiguraci typu **JAR Application**, stačí v ní ponechat cestu k `T18_cviceni-CSV.jar`; ukázková data se hledají automaticky vedle JARu. Při opravě existující instalace nahraďte starý JAR novým a spusťte stejnou konfiguraci znovu. Explicitní vlastní vstupní cesty zadané argumenty jsou nadále relativní k pracovní složce, pokud nejsou absolutní.
+
+ZIP obsahuje `pom.xml`, `src`, `data` a JAR přímo v kořeni archivu. Po extrahování otevřete v IntelliJ složku, kde tyto položky skutečně jsou.

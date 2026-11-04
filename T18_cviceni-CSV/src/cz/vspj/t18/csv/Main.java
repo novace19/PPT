@@ -10,11 +10,16 @@ public final class Main {
     private Main() { }
     public static void main(String[] args) { int code=run(args,System.out,System.err); if(code!=0) System.exit(code); }
     public static int run(String[] args,PrintStream out,PrintStream err) {
-        if(args.length==0) args=new String[]{"data/studenti-i.csv","i","data/znamky-i.csv","i","vystup-demo-" + System.currentTimeMillis()};
-        if(args.length!=5) {
+        if(args.length!=0 && args.length!=5) {
             err.println("Použití: java -jar T18_cviceni-CSV.jar studenti.csv i|ii|iii znamky.csv i|ii|iii|i-named|ii-named|iii-named NOVA_VYSTUPNI_SLOZKA"); return 2;
         }
         try {
+            if (args.length==0) {
+                Path base=DemoPaths.projectDirectory();
+                args=new String[]{base.resolve("data/studenti-i.csv").toString(),"i",
+                        base.resolve("data/znamky-i.csv").toString(),"i",
+                        base.resolve("vystup-demo-"+System.currentTimeMillis()).toString()};
+            }
             var factory=new DataFormatFactory();
             var data=new SchoolService(new Utf8FileProvider(),factory).load(Path.of(args[0]),args[1],Path.of(args[2]),args[3]);
             var formatter=new ReportFormatter();

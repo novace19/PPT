@@ -35,4 +35,4 @@ Odevzdávací archiv: [T18_ukol-03.zip](T18_ukol-03.zip).
 
 ## Cvičení — CSV: studenti, třídy a známky (T18)
 
-Samostatný projekt [T18_cviceni-CSV](T18_cviceni-CSV): tři formáty seznamů, pevné i pojmenované známky, Provider/Builder/Factory, export tříd a výsledků, 64 testů. [ZIP ke stažení](T18_cviceni-CSV.zip).
+Samostatný projekt [T18_cviceni-CSV](T18_cviceni-CSV): tři formáty seznamů, pevné i pojmenované známky, Provider/Builder/Factory, export tříd a výsledků, 70 testů. [ZIP ke stažení](T18_cviceni-CSV.zip).

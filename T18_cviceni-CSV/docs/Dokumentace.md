@@ -69,7 +69,7 @@ Ukázková 7A: Anna Marie Nováková má známky 1, 2, 1, 3, 1 a průměr **1,60
 
 ## Testování a výsledky
 
-**64 testů prošlo, 0 chyb, 0 přeskočených.** Ověřeno na OpenJDK 17.0.20, Maven 3.9.9, JUnit 5.10.2 v Linuxu. Protokol je v `Vysledky_testu.txt`; skutečný ukázkový běh JARu je v `Ukazka_spusteni.txt`. Spouštění Windows skriptu v tomto prostředí nebylo přímo ověřeno.
+**70 testů prošlo, 0 chyb, 0 přeskočených.** Ověřeno na OpenJDK 17.0.20, Maven 3.9.9, JUnit 5.10.2 v Linuxu. Protokol je v `Vysledky_testu.txt`; skutečný ukázkový běh JARu je v `Ukazka_spusteni.txt`. Spouštění Windows skriptu v tomto prostředí nebylo přímo ověřeno.
 
 | Oblast | Ověření |
 |---|---|
@@ -101,3 +101,8 @@ Soubory se načítají celé do paměti. „Libovolný počet“ tedy znamená b
 ## Spouštěč Windows
 
 `spustit.bat` hledá `java.exe` nejprve v JDK stažených přes IntelliJ (`%USERPROFILE%\.jdks\*\bin\java.exe`), poté v JAVA_HOME a PATH. `pushd` obslouží i UNC cesty. Spouští přímo přiložený JAR a zachová chybový výstup v okně. Tato změna řeší stav, kdy Java funguje v IDE, ale příkaz java není známý systému. Java 17 nebo novější musí být v počítači dostupná. Samotný BAT nebyl v Linuxovém ověřovacím prostředí spuštěn pod Windows; JAR a funkční testy byly ověřeny samostatně.
+
+
+## Oprava nezávislosti na pracovní složce
+
+`DemoPaths` určí umístění běžícího JARu či přeložených tříd a vyhledá oba ukázkové soubory. Podporuje běh z JARu, Maven target/classes, IntelliJ out/production i vnější extrakční složku. Data vedle aplikace mají přednost před stejnojmennými soubory v náhodné pracovní složce. Pouze bezparametrová ukázka používá automatickou detekci; vlastní argumenty se nemění. Šest regresních testů pokrývá právě tyto situace a chybu při chybějících datech. Opravený JAR byl navíc úspěšně spuštěn z /tmp s exportem do projektové složky. Přiložená IntelliJ konfigurace používá JAR Application a nepotřebuje kompilaci zdrojů před spuštěním.

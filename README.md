@@ -24,3 +24,10 @@ Test `nadHraniciVyznamenani` očekává pro [1,2,2] „prospěl“. Při celoč�
 
 ## Obsah odevzdání
 Implementace v src/main/java, testy v src/test/java, rozbor a vygenerovaná Javadoc v docs, skutečné výsledky ověření v docs/overeni.txt.
+
+
+## Úkol 03 — Kalkulačka faktoriálu (T18)
+
+Samostatný projekt: [T18_ukol-03](T18_ukol-03). Obsahuje Swing GUI, tři vrstvy, výjimky, 28 testů a dokumentaci se snímky. Otevřete přímo tuto podsložku v IntelliJ IDEA.
+
+Odevzdávací archiv: [T18_ukol-03.zip](T18_ukol-03.zip).

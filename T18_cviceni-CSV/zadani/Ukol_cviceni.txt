@@ -1,0 +1,3 @@
+Proveďte objetkový návrh a implementaci tříd pro načítání různých formátů dat v souboru csv. 
+Snažte se o maximalizace oddělení odpovědnosti(!!!) a ošetřete chybové stavy (neexistující soubor, nedosatečné oprávnění 
+přístupu k souboru, neplatný formát dat v souboru, ...). Implementujte vrstvy aplikace a zprovozněte načítání souborů.

@@ -1,0 +1,199 @@
+
+Problém: Seznam studentů třídy a seznam tříd se seznamem žáků. 
+
+Načíst seznamy studentů tříd z textového souboru (*.csv), který má tento formát. Jméno a příjmení může být složeno z více slov.
+Potřebujeme oddělit jméno a příjmení. Tříd může být libovolný počet. 
+
+a) Cílem (Úkolem) je vygenerovat seznam studentů každé třídy v samostatných soubor. Soubor se bude jmenovat podle zkratky třídy. 
+Tyto seznamy budou mít stejný formát jako zdrojový soubor. Číslo studenta je dáno pořadím v seznamu. 
+
+V dalším souboru budou známky z předmětů. 
+Předměty (MAT, FYZ, IT, TV, CJ) mají pevné pořadí. Jak mohou být zapsáno známky?
+
+Předměty (dtto) nemají pevné pořadí. Jak mohou být zapsáno známky? 
+MAT:1;FYZ:2;IT:1;CJ:1;TV:5
+
+b) Cílem (Úkolem) je spočítat prospěch studenta a prospěch třídy po předmětech. Provést přehledný export s výsledky.
+
+Pokyny k realizaci:
+1. Pro seznamy studentů použijte klasické pole. A pro známky použijte mapu.
+2. Uvažujte všechny uvedené typy formátu souborů. Implementujte tak, aby byl problém snadno rozšiřitelný o další formát souboru (např. xml)
+3. "oddělení zodpovědnosti", použijte návrhový vzor Provider, Builder, Factory a správný objektový návrh.
+4. Ošetřete chybové stavy. : počet studentů a počet sad známek; počet známky; neexistující soubor
+Proveďte!
+
+
+
+
+------------------------------------------------------------------------
+
+I. Uvažované formáty souboru se seznamy studentů.
+
+i)
+
+7A
+Jmeno1;Prijmeni1
+Jmeno2;Prijmeni2
+... ...
+... ...
+... ...
+... ...
+Jmeno30;Prijmeni30
+
+7B
+Jmeno1;Prijmeni1
+Jmeno2;Prijmeni2
+... ...
+... ...
+... ...
+... ...
+Jmeno25;Prijmeni25
+
+7C
+Jmeno1;Prijmeni1
+Jmeno2;Prijmeni2
+... ...
+... ...
+... ...
+... ...
+Jmeno28;Prijmeni28
+
+ii)
+
+7A
+30
+Jmeno1;Prijmeni1
+Jmeno2;Prijmeni2
+... ...
+... ...
+... ...
+... ...
+Jmeno30;Prijmeni30
+7B
+25
+Jmeno1;Prijmeni1
+Jmeno2;Prijmeni2
+... ...
+... ...
+... ...
+... ...
+Jmeno25;Prijmeni25
+7C
+28
+Jmeno1;Prijmeni1
+Jmeno2;Prijmeni2
+... ...
+... ...
+... ...
+... ...
+Jmeno28;Prijmeni28
+
+iii)
+
+7A
+30
+Jmeno1
+Prijmeni1
+Jmeno2
+Prijmeni2
+...
+...
+...
+...
+...
+...
+...
+...
+Jmeno30
+Prijmeni30
+7B
+25
+Jmeno1
+Prijmeni1
+Jmeno2
+Prijmeni2
+...
+...
+...
+...
+...
+...
+...
+...
+Jmeno25
+Prijmeni25
+7C
+28
+Jmeno1
+Prijmeni1
+Jmeno2
+Prijmeni2
+...
+...
+...
+...
+...
+...
+...
+...
+Jmeno28
+Prijmeni28
+
+II. Uvažované formáty souboru s hodnocením.
+
+i)
+
+7A
+1;1;3;4;1
+2;4;3;4;1
+1;3;2;1;1
+1;1;1;1;1
+... ...
+
+7B
+... ...
+
+7C
+... ...
+
+
+ii)
+
+7A
+30
+1;1;3;4;1
+2;4;3;4;1
+1;3;2;1;1
+1;1;1;1;1
+... ...
+7B
+25
+... ...
+7C
+28
+... ...
+
+iii)
+
+7A
+30
+1
+1
+3
+4
+1
+2
+4
+3
+4
+1
+1
+3
+2
+1
+1
+1
+1
+1
+1
+1

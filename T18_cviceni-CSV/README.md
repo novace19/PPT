@@ -1,0 +1,50 @@
+# T18_cviceni-CSV — studenti, třídy a známky
+
+Samostatné cvičení skupiny T18 v Javě 17. Načítá všechny tři zadané formáty seznamů studentů a známek, včetně pojmenovaných předmětů v libovolném pořadí. Rozdělí seznam do souborů podle tříd a vytvoří přehledy prospěchu. Zadání nevyžaduje GUI, aplikace má konzolové ovládání.
+
+## Nejrychlejší spuštění
+
+1. Rozbalte ZIP do složky.
+2. Na Windows spusťte **spustit.bat**. Potřebujete Java 17 nebo novější v PATH.
+3. Ukázka načte data z `data/`, vypíše výsledky a vytvoří novou složku `vystup-demo-ČÍSLO`. Každé spuštění ukázky použije novou složku.
+
+Na Linuxu/macOS: `sh spustit.sh`.
+
+## IntelliJ IDEA
+
+Přes **File → Open** vyberte přímo soubor `pom.xml` v této složce a otevřete jej jako projekt. Nastavte JDK 17 nebo novější, počkejte na import Maven a spusťte `src/cz/vspj/t18/csv/Main.java`. Pracovní adresář konfigurace Run musí být kořen tohoto projektu, kde je složka `data`.
+
+Přiložený `T18_cviceni-CSV.jar` už je sestavený; Maven potřebujete pro nové sestavení a testy.
+
+## Vlastní vstupy
+
+```sh
+java -jar T18_cviceni-CSV.jar data/studenti-ii.csv ii data/znamky-iii-named.csv iii-named vystup-vlastni
+```
+
+Parametry jsou v pořadí: **soubor studentů, formát studentů, soubor známek, formát známek, nová výstupní složka**. Výstupní složka nesmí existovat; použijte pokaždé nový název. Soubory se načítají v UTF-8, podporováno je i UTF-8 BOM. Pořadí studentů ve známkách musí odpovídat pořadí v seznamu stejné třídy.
+
+| Formát | Seznam studentů | Známky |
+|---|---|---|
+| `i` | Zkratka třídy, řádky `jméno;příjmení`, prázdný řádek mezi třídami | Zkratka třídy, řádek pěti známek na studenta, prázdný řádek mezi třídami |
+| `ii` | Zkratka třídy, počet studentů, řádky `jméno;příjmení` | Zkratka třídy, počet sad, řádek pěti známek na studenta |
+| `iii` | Zkratka třídy, počet, jméno a příjmení na samostatných řádcích | Zkratka třídy, počet sad, každá známka na samostatném řádku |
+
+Pro známky přidejte `-named`, pokud používáte pojmenované předměty: `i-named`, `ii-named`, `iii-named`. V prvních dvou variantách např. `MAT:1;FYZ:2;IT:1;CJ:1;TV:5`; ve třetí variantě jedna dvojice na řádek. Musí být uvedeno všech pět předmětů právě jednou. Bez názvů platí pořadí **MAT, FYZ, IT, TV, CJ**. Všechny kombinace formátu studentů a formátu známek lze míchat.
+
+## Výstupy
+
+- `7A.csv`, `7B.csv`, …: každá třída ve stejném formátu jako vstupní seznam studentů; zachované pořadí a víceslovná jména.
+- `prehledy/studenti.csv`: pořadové číslo, oddělená jména a příjmení, známky, průměr a prospěch.
+- `prehledy/tridy.csv`: počet studentů a průměry třídy po předmětech.
+
+Čísla studentů začínají v každé třídě od 1. Průměr je aritmetický; známka 5 znamená `NEPROSPĚL`, ostatní kombinace `PROSPĚL`. Kritéria vyznamenání zadání neurčuje, proto se neodvozují. U prázdné třídy se místo průměru vypíše pomlčka. Export zaokrouhluje až při zobrazení na dvě desetinná místa.
+
+## Sestavení a testy
+
+```sh
+mvn clean package
+java -jar target/T18_cviceni-CSV.jar
+```
+
+Ověřeno: **64 testů, 0 chyb, 0 přeskočených**. Závislosti testů jsou v `pom.xml` (JUnit 5). Podrobnosti a popis návrhových vzorů najdete v [docs/Dokumentace.md](docs/Dokumentace.md), skutečný protokol v [docs/Vysledky_testu.txt](docs/Vysledky_testu.txt).

@@ -1,64 +1,49 @@
+T18_ukol-03 — ověření opravené návaznosti na projekt 01
+OpenJDK 17.0.20; Maven 3.9.9; JUnit 5.10.2; Xvfb
+Příkaz: mvn -Djava.awt.headless=false -Dscreenshots=true clean package
 
-Thanks for using JUnit! Support its development at https://junit.org/sponsoring
-
-╷
-├─ JUnit Jupiter ✔
-│  ├─ MyMathTest ✔
-│  │  ├─ correctValues(int, long) ✔
-│  │  │  ├─ [1] 0, 1 ✔
-│  │  │  ├─ [2] 1, 1 ✔
-│  │  │  ├─ [3] 2, 2 ✔
-│  │  │  ├─ [4] 5, 120 ✔
-│  │  │  ├─ [5] 10, 3628800 ✔
-│  │  │  ├─ [6] 12, 479001600 ✔
-│  │  │  ├─ [7] 13, 6227020800 ✔
-│  │  │  └─ [8] 20, 2432902008176640000 ✔
-│  │  ├─ overflow(int) ✔
-│  │  │  ├─ [1] 21 ✔
-│  │  │  ├─ [2] 100 ✔
-│  │  │  └─ [3] 2147483647 ✔
-│  │  └─ negative(int) ✔
-│  │     ├─ [1] -1 ✔
-│  │     ├─ [2] -5 ✔
-│  │     └─ [3] -2147483648 ✔
-│  ├─ CalculatorUiTest ✔
-│  │  └─ completeUserWorkflow() 16663 ms ✔
-│  └─ FactorialServiceTest ✔
-│     ├─ historyAndClear() ✔
-│     ├─ invalidInput(String) ✔
-│     │  ├─ [1] null ✔
-│     │  ├─ [2]  ✔
-│     │  ├─ [3]   ✔
-│     │  ├─ [4] pět ✔
-│     │  ├─ [5] 5.0 ✔
-│     │  ├─ [6] 1,5 ✔
-│     │  ├─ [7] 2147483648 ✔
-│     │  ├─ [8] 9999999999999999999999 ✔
-│     │  ├─ [9] 21 ✔
-│     │  └─ [10] 2147483647 ✔
-│     ├─ stepsAndWhitespace() ✔
-│     └─ negative() ✔
-├─ JUnit Vintage ✔
-└─ JUnit Platform Suite ✔
-
-Test run finished after 16812 ms
-[        10 containers found      ]
-[         0 containers skipped    ]
-[        10 containers started    ]
-[         0 containers aborted    ]
-[        10 containers successful ]
-[         0 containers failed     ]
-[        28 tests found           ]
-[         0 tests skipped         ]
-[        28 tests started         ]
-[         0 tests aborted         ]
-[        28 tests successful      ]
-[         0 tests failed          ]
-
-
-Opakované ověření přes Maven 3.9.9 — mvn package:
-[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.120 s -- in cz.vspj.t18.FactorialServiceTest
-[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in cz.vspj.t18.MyMathTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.55 s -- in cz.vspj.t18.CalculatorUiTest
-[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0
+[INFO] --- clean:3.2.0:clean (default-clean) @ T18_ukol-03 ---
+[INFO] Deleting /workspace/scratch/8f74074a37b8/PPT/T18_ukol-03/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ T18_ukol-03 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/8f74074a37b8/PPT/T18_ukol-03/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ T18_ukol-03 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 8 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ T18_ukol-03 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/8f74074a37b8/PPT/T18_ukol-03/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ T18_ukol-03 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ T18_ukol-03 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cz.pokrocile.faktorial.CalcFaktorialTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.296 s -- in cz.pokrocile.faktorial.CalcFaktorialTest
+[INFO] Running cz.vspj.t18.FactorialServiceTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in cz.vspj.t18.FactorialServiceTest
+[INFO] Running cz.vspj.t18.CalculatorUiTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.74 s -- in cz.vspj.t18.CalculatorUiTest
+[INFO] Running cz.vspj.t18.MyMathTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in cz.vspj.t18.MyMathTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ T18_ukol-03 ---
+[INFO] Building jar: /workspace/scratch/8f74074a37b8/PPT/T18_ukol-03/target/T18_ukol-03.jar
+[INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  39.216 s
+[INFO] Finished at: 2026-11-04T12:50:26+01:00
+[INFO] ------------------------------------------------------------------------

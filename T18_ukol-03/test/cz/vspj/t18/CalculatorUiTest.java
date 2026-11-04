@@ -73,12 +73,12 @@ class CalculatorUiTest {
         click("calculate"); assertEquals("5! = 120\n",output());
         click("steps"); click("calculate");
         input("0"); click("calculate");
-        input("20"); click("calculate");
-        assertEquals("5! = 120\n5! = 5 * 4 * 3 * 2 * 1 = 120\n0! = 1\n20! = 20 * 19 * 18 * 17 * 16 * 15 * 14 * 13 * 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 2432902008176640000\n",output());
+        input("12"); click("calculate");
+        assertEquals("5! = 120\n5! = 5 * 4 * 3 * 2 * 1 = 120\n0! = 1\n12! = 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 479001600\n",output());
         screenshot("02_vypocty");
         click("clear"); assertEquals("",output());
         input("-1"); click("calculate"); input("pět"); click("calculate");
-        input("21"); click("calculate"); input("99999999999999999999"); click("calculate");
+        input("13"); click("calculate"); input("99999999999999999999"); click("calculate");
         input(""); click("calculate");
         assertEquals("-1! => Chyba:Nelze spočítat faktoriál záporného čísla.\n" + "=> Chyba:Vstupní údaj není správný.\n".repeat(4),output());
         screenshot("03_chyby");

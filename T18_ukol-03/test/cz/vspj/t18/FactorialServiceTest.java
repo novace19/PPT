@@ -10,7 +10,7 @@ class FactorialServiceTest {
     private final CalculationHistory history = new CalculationHistory();
     private final FactorialService service = new FactorialService(history);
     @ParameterizedTest @NullAndEmptySource
-    @ValueSource(strings={" ","pět","5.0","1,5","2147483648","9999999999999999999999","21","2147483647"})
+    @ValueSource(strings={" ","pět","5.0","1,5","2147483648","9999999999999999999999","13","2147483647"})
     void invalidInput(String input) {
         var result = service.calculate(input, true);
         assertEquals("=> Chyba:Vstupní údaj není správný.", result.output());

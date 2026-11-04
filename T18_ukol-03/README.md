@@ -2,6 +2,8 @@
 
 Samostatný projekt v Javě 17 se Swing GUI, třemi vrstvami a testy JUnit 5.
 
+Výpočet a původních 32 testů jsou skutečně převzaty z vašeho odevzdaného projektu 01. `MyMath.factorial` používá `CalcFaktorial.calc2` a vlastní `FaktorialException`. Původní soubory jsou zkopírovány beze změn; jejich původ a kontrolní součty jsou v `docs/Puvod_kodu.json`.
+
 ## Otevření v IntelliJ IDEA
 
 1. Rozbalte `T18_ukol-03.zip` a otevřete přímo složku `T18_ukol-03` (ne celý repozitář PPT).
@@ -33,10 +35,10 @@ GUI test vyžaduje aktivní grafický displej, ovládá skutečné okno přes `j
 ## Obsah
 
 - `src/` — aplikace; `Main.java` sestavuje vrstvy.
-- `test/` — testy matematiky, služby a skutečného GUI.
+- `test/` — 32 původních testů CalcFaktorial a 28 doplněných testů MyMath, služby a GUI.
 - `docs/Dokumentace.html` — samostatná dokumentace s vloženými snímky, lze otevřít v prohlížeči a vytisknout.
 - `docs/Dokumentace.md` — dokumentace pro čtení na GitHubu.
-- `docs/Vysledky_testu.txt` — skutečný protokol: 28 testů, 28 úspěšných, 0 chyb, 0 přeskočených.
+- `docs/Vysledky_testu.txt` — skutečný protokol: 60 testů, 60 úspěšných, 0 chyb, 0 přeskočených.
 - `docs/screenshots/` — čtyři snímky běžící aplikace z GUI testu.
 
-Přesný rozsah: 0 až 20, návratový typ `long`; 0! = 1. Hodnota 21 a vyšší, prázdný vstup, desetinné číslo nebo nečíselný text vytvoří chybový řádek. Záporné číslo má vlastní zprávu. Historie je pouze v operační paměti a po zavření aplikace se neukládá.
+Přesný rozsah: 0 až 12, návratový typ `int`; 0! = 1. Hodnota 13 a vyšší, prázdný vstup, desetinné číslo nebo nečíselný text vytvoří chybový řádek. Záporné číslo má vlastní zprávu. Historie je pouze v operační paměti a po zavření aplikace se neukládá.

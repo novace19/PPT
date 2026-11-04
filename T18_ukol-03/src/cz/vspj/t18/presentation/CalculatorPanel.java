@@ -18,7 +18,7 @@ public final class CalculatorPanel extends JPanel {
         setBorder(new EmptyBorder(22, 24, 22, 24));
         JLabel title = new JLabel("Kalkulačka faktoriálu");
         title.setFont(title.getFont().deriveFont(Font.BOLD, 24f));
-        JLabel hint = new JLabel("Zadejte celé číslo od 0 do 20. Každý výpočet se přidá do historie.");
+        JLabel hint = new JLabel("Zadejte celé číslo od 0 do 12. Každý výpočet se přidá do historie.");
         JPanel heading = new JPanel(new GridLayout(0, 1, 0, 8));
         heading.add(title); heading.add(hint);
         JLabel label = new JLabel("Celé číslo:");

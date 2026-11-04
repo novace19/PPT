@@ -1,0 +1,21 @@
+{
+  "source": "T18_ukol-01.zip, skutečné odevzdání skupiny T18 v Moodlu, 7. 10. 2026",
+  "archive_sha256": "c9ff204f6bb2c07318770034f34959da5870e9aedae3234c7798358d9c6a5922",
+  "files_copied_byte_for_byte": [
+    {
+      "original": "T18_ukol-01/projekt IntelliJ IDEA/src/main/java/cz/pokrocile/faktorial/CalcFaktorial.java",
+      "current": "src/cz/pokrocile/faktorial/CalcFaktorial.java",
+      "sha256": "0f3b6e326cf71680e528dde883a3803750a1d3e05a8d086cbde6d9e5e35321ec"
+    },
+    {
+      "original": "T18_ukol-01/projekt IntelliJ IDEA/src/main/java/cz/pokrocile/faktorial/FaktorialException.java",
+      "current": "src/cz/pokrocile/faktorial/FaktorialException.java",
+      "sha256": "2dc386e723b22db986c2be7530cb3b390f31edb9f4f8f8900b69bf0ab92bf521"
+    },
+    {
+      "original": "T18_ukol-01/projekt IntelliJ IDEA/src/test/java/cz/pokrocile/faktorial/CalcFaktorialTest.java",
+      "current": "test/cz/pokrocile/faktorial/CalcFaktorialTest.java",
+      "sha256": "fd71096753ce06d84a0e99f9f6cc36fced8a50f94fdd4c366438f7e20c6215e9"
+    }
+  ]
+}

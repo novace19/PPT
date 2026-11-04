@@ -96,3 +96,8 @@ Odmítnutí oprávnění se testuje pomocí Provideru, který vyvolá `AccessDen
 6. Parametrizované a integrační testy, sestavení JARu a skutečný běh nad ukázkovými daty.
 
 Soubory se načítají celé do paměti. „Libovolný počet“ tedy znamená bez pevně zakódovaného počtu tříd, s běžným omezením paměti JVM. XML je připravené rozšiřujícím rozhraním, nikoli implementované bez požadavku. Změna pravidel prospěchu patří do `Statistics`, nový zdroj do Provideru, nový textový formát do Factory/Strategy.
+
+
+## Spouštěč Windows
+
+`spustit.bat` hledá `java.exe` nejprve v JDK stažených přes IntelliJ (`%USERPROFILE%\.jdks\*\bin\java.exe`), poté v JAVA_HOME a PATH. `pushd` obslouží i UNC cesty. Spouští přímo přiložený JAR a zachová chybový výstup v okně. Tato změna řeší stav, kdy Java funguje v IDE, ale příkaz java není známý systému. Java 17 nebo novější musí být v počítači dostupná. Samotný BAT nebyl v Linuxovém ověřovacím prostředí spuštěn pod Windows; JAR a funkční testy byly ověřeny samostatně.

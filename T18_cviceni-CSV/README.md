@@ -5,8 +5,10 @@ Samostatné cvičení skupiny T18 v Javě 17. Načítá všechny tři zadané fo
 ## Nejrychlejší spuštění
 
 1. Rozbalte ZIP do složky.
-2. Na Windows spusťte **spustit.bat**. Potřebujete Java 17 nebo novější v PATH.
+2. Na Windows v Průzkumníku dvakrát klikněte na **spustit.bat**. Spouštěč najde JDK stažené přes IntelliJ ve složce `%USERPROFILE%\.jdks`, případně použije `JAVA_HOME` nebo `java` z PATH. Potřebujete Java 17 nebo novější; není nutné nastavovat PATH, pokud již máte JDK stažené přes IntelliJ.
 3. Ukázka načte data z `data/`, vypíše výsledky a vytvoří novou složku `vystup-demo-ČÍSLO`. Každé spuštění ukázky použije novou složku.
+
+Spouštěč funguje i ze síťové složky (UNC) pomocí `pushd`, cesty s mezerami jsou uzavřené v uvozovkách. Spouští přiložený JAR přímo, takže nevyžaduje kompilaci ani import projektu v IntelliJ. Chyby zůstávají v otevřeném okně. Soubor musí být rozbalený vedle JARu a složky `data`.
 
 Na Linuxu/macOS: `sh spustit.sh`.
 
